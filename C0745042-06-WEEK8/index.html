@@ -6,7 +6,44 @@
     <link href="css/default.css" rel="stylesheet" />
 </head>
 <body>
-    <div>Content goes here!</div>
-    <script src="js/main.js"></script>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+
+        var startnumber = 1109;
+        var counter = 11;
+        var lastnum = 119;
+
+        //function classcounter() {
+        //    var sum = 0;
+        //    for (var a = 1109; a >= 119; a -= 11) {
+        //        document.write(a + "<p>");
+        //        var sum = sum + a;
+
+        //    }
+
+        //    return sum;
+        //}
+
+        let addnum = {
+            startnumber: 1109,
+            counter: 11,
+            lastnum: 119,
+            classcounter: function () {
+                var sum = 0;
+                for (var a = 1109; a >= 119; a -= 11) {
+                    document.write(a + "<p>");
+                    var sum = sum + a;
+
+                }
+
+                return sum;
+            }
+
+
+        };
+
+
+        document.getElementById("demo").innerHTML = addnum.classcounter();</script>
 </body>
 </html>
