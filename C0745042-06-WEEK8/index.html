@@ -6,30 +6,30 @@
     <link href="css/default.css" rel="stylesheet" />
 </head>
 <body>
-    <p id="demo"></p>
-
+  
     <script type="text/javascript">
 
-        let addnum = {
+
+        var calculator = {
+            sum:0,
             startnumber: 1109,
-            counter: 11,
+            stepdwnum: 11,
             lastnum: 119,
-            classcounter: function () {
-                var sum = 0;
-                for (var a = 1109; a >= 119; a -= 11) {
+            addup: function () {
+                for (counter = this.startnumber; counter > this.lastnum; counter -= this.stepdwnum) {
                    
-                    var sum = sum + a;
+                    this.sum += counter;
 
                 }
 
-                return sum;
+                return this.sum;
             }
 
 
         };
 
 
-        document.getElementById("demo").innerHTML = "The sum is " +addnum.classcounter();
+        document.write(calculator.addup());
     </script>
 </body>
 </html>
